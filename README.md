@@ -18,8 +18,8 @@ This project includes a custom select component built with React and TypeScript.
 1. **Clone the repository:**
 
    ```bash
-   git clone [your-repo-link]
-   cd [your-repo-name]
+   git clone https://github.com/itsmebins/react-select
+   cd react-select
    ```
 
 2. **Install dependencies:**
@@ -57,6 +57,7 @@ Here's an overview of the project's folder structure:
 |-- package.json
 |-- README.md
 |-- tsconfig.json
+|-- vite.config.ts
 ```
 
 - `node_modules`: Node.js packages.
