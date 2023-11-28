@@ -84,4 +84,10 @@ npm run test
 
 This will execute the test suite for the custom select component.
 
+
+## Test Results
+
+![Bottom Placement](./assets/bottom-placement.png)
+![Top Placement](./assets/top-placement.png)
+
 ---
