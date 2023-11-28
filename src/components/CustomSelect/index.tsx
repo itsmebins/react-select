@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useRef, FocusEvent } from "react";
 import { ChevronUp } from "../Icons/ChevronUp";
 import styles from "./CustomSelect.module.css";
+import { KEY_ENTER, KEY_SPACE, KEY_ARROW_UP, KEY_ARROW_DOWN, KEY_ESCAPE } from '../../utils/keyboardConstants'; 
 import type { Props } from "./types";
 
 const CustomSelect: React.FC<Props> = ({
@@ -89,32 +90,31 @@ const CustomSelect: React.FC<Props> = ({
 
   const handleKeyDown = (event: React.KeyboardEvent<HTMLDivElement>) => {
     switch (event.key) {
-      case "Enter":
-      case " ":
+      case KEY_ENTER:
+      case KEY_SPACE:
         if (isOpen) {
           handleSelection(options[highlightedIndex], highlightedIndex);
         } else {
           toggleDropdown();
         }
         break;
-      case "ArrowUp":
+      case KEY_ARROW_UP:
         if (isOpen && highlightedIndex > 0) {
           setHighlightedIndex(highlightedIndex - 1);
         }
         break;
-      case "ArrowDown":
+      case KEY_ARROW_DOWN:
         if (isOpen && highlightedIndex < options.length - 1) {
           setHighlightedIndex(highlightedIndex + 1);
         }
         break;
-      case "Escape":
+      case KEY_ESCAPE:
         setIsOpen(false);
         break;
       default:
         break;
     }
   };
-
   return (
     <div
       className={styles.customSelectContainer}
@@ -161,10 +161,10 @@ const CustomSelect: React.FC<Props> = ({
               <div
                 key={option}
                 className={`${styles.optionItem} ${
-                  index === highlightedIndex
-                    ? styles.optionHighlight
-                    : selected === option
+                  selected === option
                     ? styles.highlighted
+                    : index === highlightedIndex
+                    ? styles.optionHighlight
                     : ""
                 }`}
                 onClick={() => handleSelection(option, index)}
