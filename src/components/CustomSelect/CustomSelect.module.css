@@ -1,169 +1,168 @@
 .customSelectContainer {
-    /* Style the container of the select and label */
-    display: flex;
-    flex-direction: column;
+  /* Style the container of the select and label */
+  display: flex;
+  flex-direction: column;
 }
 
 .customSelectLabel {
-    /* Style for the label */
-    margin-bottom: 8px; /* Space between label and select box */
-    font-size: 16px; /* Label font size */
-    color: #333; /* Label text color */
+  /* Style for the label */
+  margin-bottom: 8px; /* Space between label and select box */
+  font-size: 16px; /* Label font size */
+  color: #333; /* Label text color */
 }
 .customSelect {
-    position: relative;
-    min-width: 250px; /* Minimum width */
-    max-width: 100%; /* Adapts to the container */
-    width: auto; /* Flexible width */
-    user-select: none;
-    border-radius: 8px;
-    font-size: 14px;
-    background-color: #fff;
-    border: 1px solid #ccc;
+  position: relative;
+  min-width: 250px; /* Minimum width */
+  max-width: 100%; /* Adapts to the container */
+  width: auto; /* Flexible width */
+  user-select: none;
+  border-radius: 8px;
+  font-size: 14px;
+  background-color: #fff;
+  border: 1px solid #ccc;
 }
 .customSelect:hover {
-    /* Styles when the mouse hovers over the element */
-    border: 1px solid #652A8C; /* Example: change background color */
+  /* Styles when the mouse hovers over the element */
+  border: 1px solid #652a8c; /* Example: change background color */
 }
 
 .customSelect:active {
-    /* Styles when the element is clicked */
-    border: 1px solid #652A8C; /* Example: slightly darker color on click */
+  /* Styles when the element is clicked */
+  border: 1px solid #652a8c; /* Example: slightly darker color on click */
 }
 .customSelect:focus {
-    /* Styles when the element is focused (e.g., via tab key) */
-    outline: 1px solid #652A8C; /* Example: add an outline on focus */
+  /* Styles when the element is focused (e.g., via tab key) */
+  outline: 1px solid #652a8c; /* Example: add an outline on focus */
 }
 
 .selectedValue {
-    padding: 8px 12px;
-    border-radius: 8px;
-    cursor: pointer;
-    outline: none;
-    overflow: hidden;
-    white-space: nowrap;
-    text-overflow: ellipsis;
-    display: flex; /* Use flexbox for layout */
-    justify-content: space-between; /* Space between text and arrow icon */
-    align-items: center; /* Align items vertically */
-    height: 100%
+  padding: 8px 12px;
+  border-radius: 8px;
+  cursor: pointer;
+  outline: none;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  display: flex; /* Use flexbox for layout */
+  justify-content: space-between; /* Space between text and arrow icon */
+  align-items: center; /* Align items vertically */
+  height: 100%;
 }
 
 .placeholder {
-    color: #aaa; /* Lighter color for placeholder */
+  color: #aaa; /* Lighter color for placeholder */
 }
 
 .optionsList {
-    position: absolute;
-    z-index: 1000; 
-    left: 0;
-    right: 0;
-    border: 1px solid #652A8C;
-    background: white;
-    max-height: 200px;
-    overflow-y: auto;
-    border-radius: 8px;
+  position: absolute;
+  z-index: 1000;
+  left: 0;
+  right: 0;
+  border: 1px solid #652a8c;
+  background: white;
+  max-height: 200px;
+  overflow-y: auto;
+  border-radius: 8px;
 }
 
 .optionItem {
-    padding: 8px 12px;
-    cursor: pointer;
-    outline: none;
-    overflow: hidden;
-    white-space: nowrap;
-    text-overflow: ellipsis;
+  padding: 8px 12px;
+  cursor: pointer;
+  outline: none;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 }
 
 .icon {
-    /* Additional styles for arrow icon */
-    margin-left: 8px; /* Space between text and icon */
-    width: 16px;
-    height: 16px;
+  /* Additional styles for arrow icon */
+  margin-left: 8px; /* Space between text and icon */
+  width: 16px;
+  height: 16px;
 }
 
 .iconDown {
-    transform: rotate(180deg);
+  transform: rotate(180deg);
 }
 .optionHighlight {
-    background-color: #A57EBF;
-    color: #fff;
+  background-color: #a57ebf;
+  color: #fff;
 }
 .optionItem:hover,
 .optionItem:focus {
-    background-color: #A57EBF;
-    color: #fff;
+  background-color: #a57ebf;
+  color: #fff;
 }
 
 .bottom {
-    /* Position dropdown below the select box */
-     top: 100%; 
-     margin-top: 10px;
+  /* Position dropdown below the select box */
+  top: 100%;
+  margin-top: 10px;
 }
 
 .top {
-    /* Position dropdown above the select box */
-     bottom: 100%; 
-     margin-bottom: 10px;
+  /* Position dropdown above the select box */
+  bottom: 100%;
+  margin-bottom: 10px;
 }
 
 .middle {
-    /* Position the dropdown in the middle */
-    top: 50%;
-    transform: translateY(-50%);
+  /* Position the dropdown in the middle */
+  top: 50%;
+  transform: translateY(-50%);
 }
 
 .highlighted {
-    background-color: #652A8C;
-    color: #fff;
+  background-color: #652a8c;
+  color: #fff;
 }
 
 /* Media query for small screens (mobile devices) */
 @media (max-width: 600px) {
-    .customSelect {
-        height: 40px
-    }
-    .selectedValue {
-        padding: 6px 10px; /* Smaller padding */
-        font-size: 14px; /* Smaller font size */
-    }
-    .optionItem {
-        font-size: 14px; /* Moderate font size */
-    }
+  .customSelect {
+    height: 40px;
+  }
+  .selectedValue {
+    padding: 6px 10px; /* Smaller padding */
+    font-size: 14px; /* Smaller font size */
+  }
+  .optionItem {
+    font-size: 14px; /* Moderate font size */
+  }
 }
 
 /* Media query for medium screens (tablet devices) */
 @media (min-width: 601px) and (max-width: 1024px) {
-    .customSelect {
-        height: 45px
-    }
-    .selectedValue {
-        padding: 8px 12px; /* Moderate padding */
-        font-size: 16px; /* Moderate font size */
-    }
-    .optionItem {
-        font-size: 16px; /* Moderate font size */
-    }
-    .icon {
-        width: 20px;
-        height: 10px;
-    }
+  .customSelect {
+    height: 45px;
+  }
+  .selectedValue {
+    padding: 8px 12px; /* Moderate padding */
+    font-size: 16px; /* Moderate font size */
+  }
+  .optionItem {
+    font-size: 16px; /* Moderate font size */
+  }
+  .icon {
+    width: 20px;
+    height: 10px;
+  }
 }
 
 /* Media query for large screens (desktop devices) */
 @media (min-width: 1025px) {
-    .customSelect {
-        height: 56px
-    }
-    .selectedValue {
-        padding: 10px 15px; /* Larger padding */
-        font-size: 18px; /* Larger font size */
-    }
-    .optionItem {
-        font-size: 18px; /* Larger font size */  
-    }
-    .icon {
-        width: 24px;
-        height: 24px;
-    }
+  .customSelect {
+    height: 56px;
+  }
+  .selectedValue {
+    padding: 10px 15px; /* Larger padding */
+    font-size: 18px; /* Larger font size */
+  }
+  .optionItem {
+    font-size: 18px; /* Larger font size */
+  }
+  .icon {
+    width: 24px;
+    height: 24px;
+  }
 }
-

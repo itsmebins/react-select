@@ -20,7 +20,6 @@ const CustomSelect: React.FC<Props> = ({
   const dropdownRef = useRef<HTMLDivElement>(null);
   const selectedRef = useRef<HTMLDivElement>(null);
 
-
   useEffect(() => {
     onSelect(selected);
   }, [selected, onSelect]);
@@ -45,7 +44,6 @@ const CustomSelect: React.FC<Props> = ({
       window.removeEventListener("resize", setDropdownPosition);
     };
   }, []);
-
 
   const toggleDropdown = () => {
     if (!isOpen) {
@@ -80,7 +78,6 @@ const CustomSelect: React.FC<Props> = ({
       }
     }
   };
-
 
   const handleSelection = (option: string, index: number) => {
     setSelected(option);
@@ -186,4 +183,4 @@ const CustomSelect: React.FC<Props> = ({
   );
 };
 
-export default CustomSelect
+export default CustomSelect;
