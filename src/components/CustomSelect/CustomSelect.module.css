@@ -85,11 +85,13 @@
     transform: rotate(180deg);
 }
 .optionHighlight {
-    background-color: #A57EBF
+    background-color: #A57EBF;
+    color: #fff;
 }
 .optionItem:hover,
 .optionItem:focus {
-    background-color: #A57EBF
+    background-color: #A57EBF;
+    color: #fff;
 }
 
 .bottom {
